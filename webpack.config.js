@@ -5,7 +5,7 @@ const ESLintPlugin = require('eslint-webpack-plugin');
 const Dotenv = require('dotenv-webpack');
 
 module.exports = {
-  entry: './src/js/plant.js',
+  entry: './src/js/triangle.js',
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist')
@@ -19,7 +19,7 @@ module.exports = {
     new CleanWebpackPlugin(),
     new Dotenv(),
     new HtmlWebpackPlugin({
-      title: 'Power Plant',
+      title: 'RPG - Functional Programming',
       template: './src/index.html',
       inject: 'body'
     })

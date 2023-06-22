@@ -1,8 +1,8 @@
 {
-  "name": "reacttemplate",
+  "name": "RPG-FP",
   "version": "1.0.0",
   "description": "",
-  "main": "./src/js/projectName.js",
+  "main": "./src/js/triangle.js",
   "scripts": {
     "build": "webpack --mode=development",
     "start": "npm run build && webpack-dev-server --open --mode=development",

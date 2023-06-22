@@ -1,28 +1,31 @@
-<!DOCTYPE html>
 <html>
-<head>
-  <title>Shape Tracker</title>
-</head>
-<body>
-  <h3>Enter three lengths to determine if they can make a triangle.</h3>
-  <form id="triangle-checker-form">
-    <label for="length1">Enter a number:</label>
-    <input id="length1" type="number">
-    <label for="length2">Enter a number:</label>
-    <input id="length2" type="number">
-    <label for="length3">Enter a number:</label>
-    <input id="length3" type="number">
-    <button type="submit">Submit</button>
-  </form>
-  <ul id="response"></ul>
-  <h3>Enter the lengths of a rectangle's two sides to determine its area.</h3>
-  <form id="rectangle-area-form">
-    <label for="rect-length1">Enter a number:</label>
-    <input id="rect-length1" type="number">
-    <label for="rect-length2">Enter a number:</label>
-    <input id="rect-length2" type="number">
-    <button type="submit">Submit</button>
-  </form>
-  <ul id="response2"></ul>
-</body>
+  <head>
+    <link 
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" 
+      rel="stylesheet" 
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" 
+      crossorigin="anonymous">
+    <script type="text/javascript" src="./js/triangle.js"></script>
+    <title>Grow Your Character</title>
+  </head>
+  <body>
+    <button id="speed">Add speed</button>
+    <button id="jump">Add jump</button>
+    <button id="strength">Add strength</button>
+    <button id="super-speed">Add super speed</button>
+    <button id="super-jump">Add super jump</button>
+    <button id="super-strength">Add super strength</button>
+    <button id="getItem">Add item to bag</button>
+    <button id="show-state">Current Stats</button>
+    
+    <h1>Your Character's Values</h1>
+    <h3><div id="speed-value">0</div></h3>
+    <h3><div id="jump-value">0</div></h3>
+    <h3><div id="strength-value">0</div></h3>
+    <h3><div id="item-value">0</div></h3>
+
+    <form>
+      <button class="restart-btn" id="refresh">Start Over!</button>
+    </form>
+  </body>
 </html>
