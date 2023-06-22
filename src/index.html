@@ -6,27 +6,38 @@
       integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" 
       crossorigin="anonymous">
     <script type="text/javascript" src="./js/triangle.js"></script>
-    <title>Grow Your Character</title>
+    <title>RPG</title>
   </head>
   <body>
+    <h1>RPGym</h1>
+    <br>
+    <h2>Select your character:</h2>
+    <button id="createRunner">Runner</button>
+    <button id="createJumper">Jumper</button>
+    <button id="createLifter">Lifter</button>
+    <br>
+    <h2>Select character properties:</h2>
     <button id="speed">Add speed</button>
     <button id="jump">Add jump</button>
     <button id="strength">Add strength</button>
+    <br>
     <button id="super-speed">Add super speed</button>
     <button id="super-jump">Add super jump</button>
     <button id="super-strength">Add super strength</button>
+    <br>
     <button id="getItem">Add item to bag</button>
     <button id="dropItem">Remove item from bag</button>
+    <br>
     <button id="getShoes">Get shoes</button>
     <button id="dropShoes">Drop shoes</button>
     <button id="show-state">Current Stats</button>
     
-    <h1>Your Character's Values</h1>
-    <h3>Speed: <span id="speed-value">0</span></h3>
-    <h3>Jump: <span id="jump-value">0</span></h3>
-    <h3>Strength: <span id="strength-value">0</span></h3>
-    <h3>Inventory: <span id="item-value">0</span></h3>
-    <h3>Level: <span id="level">1</span></h3>
+    <h2>Your Character's Values</h2>
+    <h4>Speed: <span id="speed-value">0</span></h4>
+    <h4>Jump: <span id="jump-value">0</span></h4>
+    <h4>Strength: <span id="strength-value">0</span></h4>
+    <h4>Inventory: <span id="item-value">0</span></h4>
+    <h4>Level: <span id="level">1</span></h4>
 
     <form>
       <button class="restart-btn" id="refresh">Start Over!</button>

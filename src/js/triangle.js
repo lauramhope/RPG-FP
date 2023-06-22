@@ -30,6 +30,19 @@ export const changeState2 = (prop1, prop2) => {
   };
 };
 
+export const changeState3 = (prop1, prop2, prop3) => {
+  return (value1, value2, value3) => {
+    return (state) => ({
+      ...state,
+      [prop1] : value1,
+      [prop2] : value2,
+      [prop3] : value3,
+      ["level"] : 1,
+      ["inventory"] : 0
+    });
+  };
+};
+
 export const changeStateLimited = (prop) => {
   return (value) => {
     return (state) => {
@@ -59,6 +72,10 @@ export const changeStateNegative = (prop) => {
 };
 
 // We create four functions using our function factory. 
+export const createRunner = changeState3("speed", "jump", "strength")(5,1,1);
+export const createJumper = changeState3("speed", "jump", "strength")(1,5,1);
+export const createLifter = changeState3("speed", "jump", "strength")(1,1,5);
+
 export const speed = changeState("speed")(1);
 export const superSpeed = changeState("speed")(5);
 
@@ -126,6 +143,31 @@ if (typeof window !== 'undefined'){
       const newState3 = stateControl(dropShoes);
       document.getElementById('item-value').innerText = `${newState3.inventory}`;
       document.getElementById('speed-value').innerText = `${newState3.speed}`;
+    };
+
+    document.getElementById('createRunner').onclick = function() {
+      const newState3 = stateControl(createRunner);
+      document.getElementById('speed-value').innerText = `${newState3.speed}`;
+      document.getElementById('jump-value').innerText = `${newState3.jump}`;
+      document.getElementById('strength-value').innerText = `${newState3.strength}`;
+      document.getElementById('level').innerText = `${newState3.level}`;
+      document.getElementById('item-value').innerText = `${newState3.inventory}`;
+    };
+    document.getElementById('createJumper').onclick = function() {
+      const newState3 = stateControl(createJumper);
+      document.getElementById('speed-value').innerText = `${newState3.speed}`;
+      document.getElementById('jump-value').innerText = `${newState3.jump}`;
+      document.getElementById('strength-value').innerText = `${newState3.strength}`;
+      document.getElementById('level').innerText = `${newState3.level}`;
+      document.getElementById('item-value').innerText = `${newState3.inventory}`;
+    };
+    document.getElementById('createLifter').onclick = function() {
+      const newState3 = stateControl(createLifter);
+      document.getElementById('speed-value').innerText = `${newState3.speed}`;
+      document.getElementById('jump-value').innerText = `${newState3.jump}`;
+      document.getElementById('strength-value').innerText = `${newState3.strength}`;
+      document.getElementById('level').innerText = `${newState3.level}`;
+      document.getElementById('item-value').innerText = `${newState3.inventory}`;
     };
     // document.getElementById('show-state').onclick = function() {
     //   const currentState = stateControl();
